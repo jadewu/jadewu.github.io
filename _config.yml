@@ -1,2 +1,4 @@
 	name: Jade's Personal Page
 	markdown: kramdown
+
+permalink: /blog/:year/:month/:day/:title
