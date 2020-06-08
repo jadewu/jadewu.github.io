@@ -24,6 +24,8 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     font-weight: bold;
     color: #ae9e87
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 h2 {
     font-size: 2em;
@@ -152,7 +154,7 @@ ul.posts li {
 
 
 footer {
-  font-size: 12px;
+  font-size: 15px;
   padding: 20px;
   text-align: center;
   margin-top: 20px;
