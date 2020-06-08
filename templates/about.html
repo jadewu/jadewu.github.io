@@ -1,27 +1,6 @@
-<!-- <html>
-  <head>
-    <script src="jquery.js"></script>
-    <script>
-    $(function(){
-      $("#includedContent").load("default.html");
-    });
-    </script>
-  </head>
+{% extends "default.html" %}
 
-  <body>
-     <div id="includedContent"></div>
-  </body>
-</html>
-<div class="blurb">
-        <h2> What I am doing now...</h2>
-        <p> Construct personal page. </p>
-        <p> Do leetcode problems. </p>
-</div> -->
-
----
-layout: default
-title: Jade's About Page
----
+{% block content %}
 <div class="container">
   <div class="blurb">
           <h2> What I am doing now...</h2>
@@ -29,3 +8,4 @@ title: Jade's About Page
           <p> Do leetcode problems. </p>
   </div>
 </div>
+{% endblock %}
