@@ -1,14 +1,69 @@
----
-layout: default
-title: Jade's Personal Page
----
 
-<div class="container">
-  <div class="blurb" style="text-align: center">
-    <h1>I'm Jade Wu</h1>
-    <p>Msc in Computer Engineering @<a href="https://engineering.nyu.edu/"> NYU Tandon </a></p>
-  </div>
-  <div>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/Users/wuyue/Documents/GitHub/jadewu.github.io/statics/css/photos_slideshow.css">
+</head>
+<body>
 
-  </div>
-  <footer style="text-align: center">Photograph by me</footer>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="/Users/wuyue/Documents/GitHub/jadewu.github.io//statics/pictures/goose.png" style="width:1000px; height:500px;">
+  <div class="text">Gooses at Riverside</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="/Users/wuyue/Documents/GitHub/jadewu.github.io//statics/pictures/sunset.png" style="width:1000px; height:500px;">
+  <div class="text">Sunset at Riverside</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="/Users/wuyue/Documents/GitHub/jadewu.github.io//statics/pictures/square.png" style="width:1000px; height:500px;">
+  <div class="text">Washington Square</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
