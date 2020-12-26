@@ -1,2 +1,2 @@
 # jadewu.github.io
-uncompleted personal page
+updated personal page
